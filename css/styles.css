@@ -4,19 +4,36 @@
   box-sizing: border-box;
 }
 
+:root {
+  --yellow-color: #feba3b;
+  --dark-grey-color: #313131;
+
+  --ff-main: 'Teko', sans-serif;
+}
+
 body {
-  background-color: rgb(212, 212, 212);
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--dark-grey-color);
 }
 
 form {
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 40vw;
+  width: 30vw;
   gap: 20px;
+  background-color: rgba(0, 0, 0, .2);
+  border: 2px solid black;
+  padding: 40px 0;
+  color: white;
+  font-family: var(--ff-main);
+  box-shadow: 0 0 10px black;
 }
 
 fieldset {
@@ -26,20 +43,108 @@ fieldset {
   border: none;
 }
 
-p {
-  display: block;
+legend {
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+img {
+  width: 64px;
+}
+
+a {
+  color: var(--yellow-color);
+}
+
+a:link {
+  text-decoration: none;
+}
+
+label {
+  font-size: 20px;
 }
 
 input {
   width: 200px;
   height: 25px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+  color: white;
+  
+}
+
+input:focus {
+  outline: none;
 }
 
 button[type="submit"] {
-  margin-top: 20px;
+  border-radius: 20px;
+  padding: 10px 20px;
+  border: 2px solid var(--dark-grey-color);
+  background-color: var(--yellow-color);
+  display: inline-block;
+  margin-right: 80px;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+}
+
+.member-txt {
+  display: inline-block;
 }
 
 .container {
   display: flex;
   flex-direction: column;
+}
+
+.top-left-triangle, .btm-right-triangle {
+  width: 800px;
+  height: 2000px;
+  background-color: var(--yellow-color);
+  position: absolute;
+  transform: rotateZ(45deg);
+  z-index: -10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: var(--ff-main);
+}
+
+.btm-right-triangle {
+  bottom: -700px;
+  right: -300px;
+  box-shadow: -3px -3px 10px black;
+  align-items: flex-start;
+}
+
+.top-left-triangle {
+  top: -700px;
+  left: -300px;
+  box-shadow: 3px 3px 10px black;
+  align-items: flex-end;
+}
+
+.glorious-txt-right, .glorious-txt-left {
+  color: var(--dark-grey-color);
+  font-size: 64px;
+}
+
+.glorious-txt-right {
+  transform: rotateZ(-90deg);
+  margin-left: 40px;
+  display: inline-block;
+  height: 100%;
+}
+
+.glorious-txt-left {
+  transform: rotateZ(-90deg);
+  margin-right: -130px;
+  height: 100%;
+  display: inline-block;
 }
