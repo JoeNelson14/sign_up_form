@@ -26,7 +26,7 @@ form {
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 30vw;
+  width: 35rem;
   gap: 20px;
   background-color: rgba(0, 0, 0, .2);
   border: 2px solid black;
@@ -73,11 +73,21 @@ input {
   border: none;
   border-bottom: 2px solid white;
   color: white;
-  
 }
 
 input:focus {
   outline: none;
+}
+
+input:invalid {
+  border-color: red;
+}
+input:valid {
+  border-color: rgb(0, 255, 0);
+}
+
+input:placeholder-shown {
+  border-color: white;
 }
 
 button[type="submit"] {
@@ -117,14 +127,14 @@ button[type="submit"] {
 }
 
 .btm-right-triangle {
-  bottom: -700px;
+  bottom: -75rem;
   right: -300px;
   box-shadow: -3px -3px 10px black;
   align-items: flex-start;
 }
 
 .top-left-triangle {
-  top: -700px;
+  top: -75rem;
   left: -300px;
   box-shadow: 3px 3px 10px black;
   align-items: flex-end;
@@ -147,4 +157,9 @@ button[type="submit"] {
   margin-right: -130px;
   height: 100%;
   display: inline-block;
+}
+
+.password-instructions {
+  font-size: 14px;
+  padding-left: 10px;
 }
