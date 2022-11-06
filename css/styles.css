@@ -114,8 +114,8 @@ button[type="submit"] {
 }
 
 .top-left-triangle, .btm-right-triangle {
-  width: 800px;
-  height: 2000px;
+  width: 70rem;
+  height: 120rem;
   background-color: var(--yellow-color);
   position: absolute;
   transform: rotateZ(45deg);
@@ -127,15 +127,15 @@ button[type="submit"] {
 }
 
 .btm-right-triangle {
-  bottom: -75rem;
-  right: -300px;
+  bottom: -40vw;
+  right: -40vh;
   box-shadow: -3px -3px 10px black;
   align-items: flex-start;
 }
 
 .top-left-triangle {
-  top: -75rem;
-  left: -300px;
+  top: -40vw;
+  left: -40vh;
   box-shadow: 3px 3px 10px black;
   align-items: flex-end;
 }
